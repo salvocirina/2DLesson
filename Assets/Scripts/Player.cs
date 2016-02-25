@@ -14,7 +14,7 @@ public class Player : MonoBehaviour {
 		rb = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
 	}
-	// Use this for initialization
+
 	void Start () {
 		facingRight = true;
 	}
@@ -38,6 +38,8 @@ public class Player : MonoBehaviour {
 		 
 
 		Move (moveH);
+
+		Debug.Log (moveH);
 
 		anim.SetFloat ("Speed", moveH);
 	}
